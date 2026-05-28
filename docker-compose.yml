@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: glomopay-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: glomopay
+    ports:
+      - "5432:5432"
+    volumes:
+      - glomopay_pgdata:/var/lib/postgresql/data
+
+volumes:
+  glomopay_pgdata:
+
