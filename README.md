@@ -116,3 +116,10 @@ TABLE=users npm run db:clear
 ```bash
 npm run db:reset
 ```
+
+
+## Assumptions Made
+
+1. Amount is in cents/paise.
+2. No tokens saved for session. Cannot invalidate tokens from server. Not generating any refresh tokens.
+3. Not saving any txn history. Only current balance is stored.
